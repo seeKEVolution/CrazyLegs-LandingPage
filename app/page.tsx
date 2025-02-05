@@ -140,14 +140,13 @@ export default function Home() {
             crazylegs3llc@gmail.com
           </p>
           <div className="flex justify-center gap-6 mb-8">
-            <a href="#" className="text-[#0645f9] hover:opacity-80 transition-opacity">
+            <a 
+              href="https://www.instagram.com/crazylegsclt/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[#0645f9] hover:opacity-80 transition-opacity"
+            >
               <Instagram size={32} />
-            </a>
-            <a href="#" className="text-[#0645f9] hover:opacity-80 transition-opacity">
-              <Facebook size={32} />
-            </a>
-            <a href="#" className="text-[#0645f9] hover:opacity-80 transition-opacity">
-              <Twitter size={32} />
             </a>
           </div>
           <p className="text-lg text-[#0645f9]">
