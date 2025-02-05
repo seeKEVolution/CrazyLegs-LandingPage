@@ -4,6 +4,14 @@ import { useState, useEffect, useRef } from "react";
 import { Volume2, VolumeX, Instagram, Facebook, Twitter } from "lucide-react";
 import Image from "next/image";
 
+/**
+ * Background Music Attribution:
+ * Colorful Flowers by Tokyo Music Walker | https://soundcloud.com/user-356546060
+ * Music promoted by https://www.chosic.com/free-music/all/
+ * Creative Commons CC BY 3.0
+ * https://creativecommons.org/licenses/by/3.0/
+ */
+
 export default function Home() {
   const [isMuted, setIsMuted] = useState(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -11,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     // Initialize audio only once
     if (!audioRef.current) {
-      audioRef.current = new Audio("/lofi-background.mp3");
+      audioRef.current = new Audio("/music/Colorful-Flowers(chosic.com).mp3");
       audioRef.current.loop = true;
       audioRef.current.volume = 0.5;
     }
@@ -73,22 +81,25 @@ export default function Home() {
           </button>
         </div>
         
-        <div className="relative w-[300px] md:w-[400px] mb-8">
+        <div className="relative w-[600px] mb-8">
           <Image
-            src="/crazy-legs-logo.png"
+            src={'/images/crazy-legs-logo.png'}
             alt="Crazy Legs Logo"
-            width={400}
-            height={300}
+            width={600}
+            height={600}
             priority
             className="w-full h-auto"
+            onError={(e) => {
+              console.error('Error loading image:', e);
+            }}
           />
         </div>
-        <h2 className="text-4xl md:text-6xl font-bold text-[#0645f9] mb-8 text-center px-4 font-display">
-          Charlotte
-        </h2>
-        <div className="animate-flash text-4xl md:text-6xl font-bold text-white bg-[#0645f9] px-8 py-4 rounded-lg shadow-lg">
+        <div className="animate-flash text-4xl md:text-7xl font-stencil text-white bg-[#0645f9] px-12 py-6 rounded-lg shadow-2xl transform hover:scale-105 transition-all border-4 border-white/20 backdrop-blur-sm mb-8 tracking-wider">
           COMING SOON
         </div>
+        <h2 className="text-2xl md:text-4xl font-bold text-[#0645f9] text-center px-4 tracking-wide font-montserrat">
+          Charlotte
+        </h2>
       </section>
 
       {/* Menu Preview Section */}

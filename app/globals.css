@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -12,7 +10,13 @@
 
 @layer base {
   .font-display {
-    font-family: 'Archivo Black', sans-serif;
+    font-family: var(--font-archivo);
+  }
+  .font-stencil {
+    font-family: var(--font-saira-stencil);
+  }
+  .font-montserrat {
+    font-family: var(--font-montserrat), sans-serif;
   }
 }
 
