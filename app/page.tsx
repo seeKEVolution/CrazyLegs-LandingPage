@@ -83,14 +83,14 @@ export default function Home() {
         
         <div className="relative w-[600px] mb-8">
           <Image
-            src={'/images/crazy-legs-logo.png'}
+            src={"/images/crazy-legs-logo.png"}
             alt="Crazy Legs Logo"
             width={600}
             height={600}
             priority
             className="w-full h-auto"
             onError={(e) => {
-              console.error('Error loading image:', e);
+              console.error("Error loading image:", e);
             }}
           />
         </div>
